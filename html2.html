@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>comments 2.0</title>
+
+  </head>
+  <body>
+    <html lang="en" dir="ltr" style="scroll-behavior: smooth;   overflow-x: hidden;">
+      <head>
+        <meta charset="utf-8">
+        <title>Comment</title>
+        <link rel="stylesheet" href="css/crose.css">
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:500&display=swap" rel="stylesheet">
+
+
+      </head>
+      <body style="height:100%;"><div id="home"></div>
+        <div id="top">
+
+        </div>
+        <section>
+          <header id="top">
+            <div class="logo" id="logo">
+
+            </div>
+            <nav>
+              <li><a href="index.html">About us</a></li>
+              <li><a href="#">write comment</a></li>
+              <li class="active"><a href="#ft">comments</a></li>
+            </nav>
+
+          </header>
+          <article class="contain comen" >
+          Comments (one of API)
+        </article>
+    <article id="wrapper" class="com">
+      <div class="column one">
+
+      </div>
+      <div class="column two">
+        <div  class="comment">
+        <h1 id='qqq'></h1>
+        <div id='qqq3' class="text">
+
+        </div>
+        <button type="button" name="button" onclick="Hide()">Read more</button>
+      </div>
+        <div class="comment">
+          <h1>     Why do we use it?</h1>
+          <div class="text">
+
+            Itis a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.
+
+          </div><button type="button" name="button" onclick="Hide()">Read more</button>
+        </div>
+
+        <div class="comment">
+          <h1>      There are many variations of passages of Lorem Ipsum available.</h1>
+          <div class="text">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+
+          </div><button type="button" name="button" onclick="Hide()">Read more</button>
+
+
+
+        </div>
+        <div class="comment">
+          <h1>      What is Lorem Ipsum?</h1>
+          <div class="text">
+
+            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+
+          </div><button type="button" name="button" onclick="Hide()">Read more</button>
+
+
+
+        </div>
+      </div>
+
+    <div class="inf">
+      <div id="show">
+        <button type="button"  name="button" onclick="Show()"><i class="fas fa-arrow-left"></i> Back to Comments</button>
+        <div class="hide">
+     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+     </div>
+     <div class="textsh">
+       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p>
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+     </div>
+      </div>
+
+    <a>  Lorem Ipsum is text of the typesetting industry</a>
+      <button type="button" name="button" onclick="document.location.href='index.html'"> <i class="fas fa-arrow-left"></i> Back to homepage</button>
+    </div>
+      </article>
+          <footer>
+          <div class="contact">
+            <div class="tel">
+              mail@mailtest.com<p>
+            +30-6977664062
+            </div>
+            <div class="copy">
+              Copyright © 2019 Test All Rights Reserved.
+
+            </div>
+
+
+
+          </div>
+          </footer>
+              </section>
+          </body>
+          <script src="https://kit.fontawesome.com/0d868b3321.js"></script>
+            <script src="js/main.js"></script>
+            <script  src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+
+<script>
+
+
+
+$.ajax({
+  url: "https://5cbef81d06a6810014c66193.mockapi.io/api/comments/68",
+  type: 'get',
+  dataType: 'json',
+  success: function (json) {
+
+      say(json);
+
+  }
+});
+
+
+function say(row){
+$('#qqq').append(row['title']);
+$('#qqq3').append(row['body']);
+  $('div.column.two').append('<div class="comment"><h1>'+row['title']+'</h1><div class="text">'+row['body']+'</div><button type="button" name="button" onclick="Hide()">Read more</button></div>');
+}
+
+</script>
+
+  </body>
+</html>
